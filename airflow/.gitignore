@@ -1,0 +1,10 @@
+*.log
+*.out
+*.pid
+*.cfg
+.DS*
+venv/
+bin
+lib
+*.json
+logs
