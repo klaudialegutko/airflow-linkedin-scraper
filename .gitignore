@@ -7,5 +7,5 @@ bin
 lib
 *.json
 logs/
-venv/*
+airflow-tutorial/venv/*
 *.db
