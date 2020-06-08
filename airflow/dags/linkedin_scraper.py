@@ -1,6 +1,5 @@
 from datetime import datetime, timedelta
 from airflow import DAG
-from airflow.operators.dummy_operator import DummyOperator
 from airflow.operators.bash_operator import BashOperator
 
 default_args = {
@@ -30,4 +29,12 @@ to_CSV = BashOperator(
     dag=dag
 )
 
-to_CSV
+to_bq = BashOperator(
+    owner='airflow',
+    task_id='toBigQuery',
+    bash_command='python3 /Users/klaudialegutko/Projects/airflow-tutorial/airflow/scripts/toBigQuery/to_bq.py',
+    retries=3,
+    dag=dag
+)
+
+to_CSV >> to_bq
