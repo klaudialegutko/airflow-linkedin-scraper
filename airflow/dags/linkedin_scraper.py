@@ -6,7 +6,7 @@ default_args = {
     'owner': 'airflow',
     'depends_on_past': False,
     'start_date': datetime(2020, 5, 26),
-    'email': ['airflow@example.com'],
+    'email': ['#######'],
     'email_on_failure': False,
     'email_on_retry': False,
     'retries': 1,
@@ -24,7 +24,7 @@ dag = DAG(
 to_CSV = BashOperator(
     owner='airflow',
     task_id='toCSV',
-    bash_command='python3 /Users/klaudialegutko/Projects/airflow-tutorial/airflow/scripts/toCSV/scrape.py',
+    bash_command='python3 /path/to/python/script',
     retries=3,
     dag=dag
 )
@@ -32,7 +32,7 @@ to_CSV = BashOperator(
 to_bq = BashOperator(
     owner='airflow',
     task_id='toBigQuery',
-    bash_command='python3 /Users/klaudialegutko/Projects/airflow-tutorial/airflow/scripts/toBigQuery/to_bq.py',
+    bash_command='python3 /path/to/python/script',
     retries=3,
     dag=dag
 )

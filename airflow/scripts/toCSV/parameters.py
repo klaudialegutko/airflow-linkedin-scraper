@@ -1,8 +1,8 @@
 # Linkedin params
 linkedin_url = 'https://www.linkedin.com/home'
-linkedin_username = 'klaudia.legutko90@gmail.com'
-linkedin_password = 'Mijusia123'
-linkedin_query = "data engineer" and "San Francisco Bay Area"
+linkedin_username = '#####'
+linkedin_password = '#####'
+linkedin_query = "#####" and "#####"
 
 # Google params
 google_chrome_driver = 'chromedriver'
@@ -11,4 +11,4 @@ google_query = 'site:linkedin.com/in/ AND "data engineer" and "San Francisco Bay
 google_scrape_limit = 200
 
 # File where scraped profile information will be stored
-file_name = '/Users/klaudialegutko/Projects/airflow-tutorial/linkedin_profiles.csv'
+file_name = '/path/to/store/csv/linkedin_profiles.csv'

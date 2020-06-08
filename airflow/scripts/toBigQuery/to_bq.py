@@ -1,9 +1,9 @@
 from google.cloud import bigquery
 
 client = bigquery.Client()
-filename = '/Users/klaudialegutko/Projects/airflow-tutorial/linkedin_profiles.csv'
-dataset_id = 'linkedin_profiles'
-table_id = 'data_engineers'
+filename = '/path/to/saved/csv/file'
+dataset_id = '#####'
+table_id = '#####'
 
 
 dataset_ref = client.dataset(dataset_id)
